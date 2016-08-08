@@ -1,0 +1,27 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Render Component
+    </div>
+</div>
+<div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>
+
+<div class='panel-body'>
+    <form class="form-horizontal">  
+        <div *ngFor="let field of fields" >
+            <div *ngIf="field.type === 'text'">
+                <text-control [field]='field' [model]='model' ></text-control>
+            </div>
+            <div *ngIf="field.type === 'title'">        
+                <title-control [field]='field' [model]='model' ></title-control>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="clearfix"></div>
+<h1>model</h1>
+ {{ model | json }}
+
+
+
+ 

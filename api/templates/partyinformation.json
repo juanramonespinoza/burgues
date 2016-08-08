@@ -1,0 +1,431 @@
+{
+    "id": "party_information",
+    "label": "Party Information",
+    "subsections": [
+        {
+            "id": "personal_information",
+            "type": "form",
+            "label": "Personal Information",
+            "show": "projectSettings.userType === 'petitioner'",
+            "fields": [
+                {
+                    "type": "title",
+                    "template": {
+                        "label": "Petitioner Information"
+                    },
+                    "show": true
+                },
+                {
+                    "id": "petitioner_first_name",
+                    "type": "text",
+                    "template": {
+                        "label": "First Name"
+                    },
+                    "required": true
+                },
+                {
+                    "id": "petitioner_middle_name",
+                    "type": "text",
+                    "template": {
+                        "max": 1,
+                        "label": "Middle Name",
+                        "size": "input-mini"
+                    }
+                },
+                {
+                    "id": "petitioner_last_name",
+                    "type": "text",
+                    "template": {
+                        "label": "Last Name"
+                    },
+                    "required": true
+                },
+                {
+                    "id": "petitioner_restored_name",
+                    "type": "text",
+                    "template": {
+                        "label": "Restore former last name to"
+                    }
+                },
+                {
+                    "id": "petitioner_street_address",
+                    "type": "text",
+                    "template": {
+                        "label": "Street Address",
+                        "max": 45
+                    },
+                    "required": true
+                },
+                {
+                    "id": "petitioner_city",
+                    "type": "text",
+                    "template": {
+                        "label": "City",
+                        "max": 25
+                    },
+                    "required": true
+                },
+                {
+                    "id": "petitioner_state",
+                    "type": "state",
+                    "template": {
+                        "label": "State"
+                    },
+                    "list": "state",
+                    "required": true
+                },
+                {
+                    "id": "petitioner_country",
+                    "type": "country",
+                    "template": {
+                        "label": "Country"
+                    },
+                    "list": "country",
+                    "required": true
+                },
+                {
+                    "id": "petitioner_zip_code",
+                    "type": "zipcode",
+                    "template": {
+                        "label": "Zip Code"
+                    },
+                    "required": true
+                },
+                {
+                    "id": "petitioner_phone_number",
+                    "type": "phone",
+                    "template": {
+                        "label": "Phone Number"
+                    },
+                    "required": true
+                },
+                {
+                    "id": "petitioner_email",
+                    "type": "email",
+                    "template": {
+                        "label": "Email Address",
+                        "placeholder": "example@domain.com"
+                    },
+                    "required": true
+                },
+                {
+                    "type": "title",
+                    "template": {
+                        "label": "Respondent Information"
+                    }
+                },
+                {
+                    "type" : "info",
+                    "template" : {
+                        "html" : "Based on your qualifying question you need enter the respondents State or Country if known</strong>."
+                    },
+                    "show": "projectSettings.sameSex"
+                },
+                {
+                    "id": "respondent_first_name",
+                    "type": "text",
+                    "template": {
+                        "label": "First Name"
+                    },
+                    "required": true
+                },
+                {
+                    "id": "respondent_middle_name",
+                    "type": "text",
+                    "template": {
+                        "max": 1,
+                        "label": "Middle Name",
+                        "size": "input-mini"
+                    }
+                },
+                {
+                    "id": "respondent_last_name",
+                    "type": "text",
+                    "template": {
+                        "label": "Last Name"
+                    },
+                    "required": true
+                },
+                {
+                    "id": "respondent_street_address",
+                    "type": "text",
+                    "template": {
+                        "label": "Street Address",
+                        "max": 45
+                    }
+                },
+                {
+                    "id": "respondent_city",
+                    "type": "text",
+                    "template": {
+                        "label": "City",
+                        "max": 25
+                    }
+                },
+                {
+                    "id": "respondent_state",
+                    "type": "state",
+                    "template": {
+                        "label": "State"
+                    },
+                    "list": "state"
+                },
+                {
+                    "id": "respondent_country",
+                    "type": "country",
+                    "template": {
+                        "label": "Country"
+                    },
+                    "list": "country"
+                },
+                {
+                    "id": "respondent_zip_code",
+                    "type": "zipcode",
+                    "template": {
+                        "label": "Zip Code"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "personal_information",
+            "type": "form",
+            "label": "Personal Information",
+            "show": "projectSettings.userType === 'respondent'",
+            "fields": [
+                {
+                    "type": "title",
+                    "template": {
+                        "label": "Respondent Information"
+                    }
+                },
+                {
+                    "id": "respondent_first_name",
+                    "type": "text",
+                    "template": {
+                        "label": "First Name"
+                    },
+                    "required": true
+                },
+                {
+                    "id": "respondent_middle_name",
+                    "type": "text",
+                    "template": {
+                        "max": 1,
+                        "label": "Middle Name",
+                        "size": "input-mini"
+                    }
+                },
+                {
+                    "id": "respondent_last_name",
+                    "type": "text",
+                    "template": {
+                        "label": "Last Name"
+                    },
+                    "required": true
+                },
+                {
+                    "id": "respondent_restored_name",
+                    "type": "text",
+                    "template": {
+                        "label": "Restore former last name to"
+                    }
+                },
+                {
+                    "id": "respondent_street_address",
+                    "type": "text",
+                    "template": {
+                        "label": "Street Address",
+                        "max": 45
+                    },
+                    "required": true
+                },
+                {
+                    "id": "respondent_city",
+                    "type": "text",
+                    "template": {
+                        "label": "City",
+                        "max": 25
+                    },
+                    "required": true
+                },
+                {
+                    "id": "respondent_state",
+                    "type": "state",
+                    "template": {
+                        "label": "State"
+                    },
+                    "list": "state",
+                    "required": true
+                },
+                {
+                    "id": "respondent_country",
+                    "type": "country",
+                    "template": {
+                        "label": "Country"
+                    },
+                    "list": "country",
+                    "required": true
+                },
+                {
+                    "id": "respondent_zip_code",
+                    "type": "zipcode",
+                    "template": {
+                        "label": "Zip Code"
+                    },
+                    "required": true
+                },
+                {
+                    "id": "respondent_phone_number",
+                    "type": "phone",
+                    "template": {
+                        "label": "Phone Number"
+                    },
+                    "required": true
+                },
+                {
+                    "id": "respondent_email",
+                    "type": "email",
+                    "template": {
+                        "label": "Email Address",
+                        "placeholder": "example@domain.com"
+                    },
+                    "required": true
+                },
+                {
+                    "type": "title",
+                    "template": {
+                        "label": "Petitioner Information"
+                    },
+                    "show": true
+                },
+                {
+                    "type" : "info",
+                    "template" : {
+                        "html" : "Based on your qualifying question you need enter the petitioners State or Country if known</strong>."
+                    },
+                    "show": "projectSettings.sameSex"
+                },
+                {
+                    "id": "petitioner_first_name",
+                    "type": "text",
+                    "template": {
+                        "label": "First Name"
+                    },
+                    "required": true
+                },
+                {
+                    "id": "petitioner_middle_name",
+                    "type": "text",
+                    "template": {
+                        "max": 1,
+                        "label": "Middle Name",
+                        "size": "input-mini"
+                    }
+                },
+                {
+                    "id": "petitioner_last_name",
+                    "type": "text",
+                    "template": {
+                        "label": "Last Name"
+                    },
+                    "required": true
+                },
+                {
+                    "id": "petitioner_street_address",
+                    "type": "text",
+                    "template": {
+                        "label": "Street Address",
+                        "max": 45
+                    }
+                },
+                {
+                    "id": "petitioner_city",
+                    "type": "text",
+                    "template": {
+                        "label": "City",
+                        "max": 25
+                    }
+                },
+                {
+                    "id": "petitioner_state",
+                    "type": "state",
+                    "template": {
+                        "label": "State"
+                    },
+                    "list": "state"
+                },
+                {
+                    "id": "petitioner_country",
+                    "type": "country",
+                    "template": {
+                        "label": "Country"
+                    },
+                    "list": "country"
+                },
+                {
+                    "id": "petitioner_zip_code",
+                    "type": "zipcode",
+                    "template": {
+                        "label": "Zip Code"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "marriage_information",
+            "type": "form",
+            "label": "Marriage Information",
+            "json": "MarriageInformation.json",
+            "show": "projectSettings.legalRelationship == 'married' || projectSettings.legalRelationship == 'both'",
+            "fields": [
+                {
+                    "id": "date_of_marriage",
+                    "type": "date",
+                    "template": {
+                        "label": "Date of marriage"
+                    },
+                    "required": true
+                },
+                {
+                    "id": "date_of_separation",
+                    "type": "date",
+                    "template": {
+                        "label": "Date of separation"
+                    },
+                    "required": true
+                }
+            ]
+        },
+        {
+            "id": "domestic_partnership_information",
+            "type": "form",
+            "label": "Domestic Partnership Information",
+            "json": "DomesticPartnershipInformation.json",
+            "show": "projectSettings.legalRelationship === 'domestic_partnership' || projectSettings.legalRelationship == 'both'",
+            "fields": [
+                {
+                    "id": "date_of_registration",
+                    "type": "date",
+                    "template": {
+                        "label": "Date of registration"
+                    },
+                    "required": true
+                },
+                {
+                    "id": "date_of_separation",
+                    "type": "date",
+                    "template": {
+                        "label": "Date of separation"
+                    },
+                    "required": true
+                }
+            ]
+        },
+        {
+            "id": "gi_section_review",
+            "type": "review",
+            "label": "Section Review"
+        }
+    ]
+}
