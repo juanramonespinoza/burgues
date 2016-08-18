@@ -9,22 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var http_1 = require('@angular/http');
-var render_component_1 = require('./render/render.component');
-var templates_service_1 = require('./shared/templates.service');
-require('rxjs/Rx'); // Load all features
 var AppComponent = (function () {
     function AppComponent() {
     }
     AppComponent = __decorate([
-        // Load all features
         core_1.Component({
-            moduleId: module.id,
             selector: 'my-app',
-            template: "<h1>My First Angular 2 App</h1>\n            <render-component></render-component>",
-            directives: [render_component_1.RenderComponent],
-            providers: [templates_service_1.TemplatesService,
-                http_1.HTTP_PROVIDERS]
+            template: "<h1>My First Angular 2 App</h1>\n            <render-component></render-component>"
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

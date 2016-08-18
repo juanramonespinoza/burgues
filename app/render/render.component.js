@@ -10,8 +10,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var templates_service_1 = require('../shared/templates.service');
-var text_component_1 = require('./components/text.component');
-var title_component_1 = require('./components/title.component');
 var RenderComponent = (function () {
     function RenderComponent(_templatesService) {
         this._templatesService = _templatesService;
@@ -25,8 +23,7 @@ var RenderComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'render-component',
-            templateUrl: 'render.component.html',
-            directives: [text_component_1.TextControlComponent, title_component_1.TitleControlComponent]
+            templateUrl: 'render.component.html'
         }), 
         __metadata('design:paramtypes', [templates_service_1.TemplatesService])
     ], RenderComponent);

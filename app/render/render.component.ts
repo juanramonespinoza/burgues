@@ -2,14 +2,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TemplatesService } from '../shared/templates.service';
 import { ISubsection, IField } from '../shared/template.model';
-import { TextControlComponent } from './components/text.component';
-import { TitleControlComponent } from './components/title.component';
 
 @Component({
     moduleId: module.id,
     selector: 'render-component',    
-    templateUrl : 'render.component.html',
-    directives: [TextControlComponent, TitleControlComponent] 
+    templateUrl : 'render.component.html'     
 })
 
 export class RenderComponent implements OnInit {
@@ -29,6 +26,4 @@ export class RenderComponent implements OnInit {
                                     subsection => this.fields = subsection.fields,
                                     error => this.errorMessage = <any>error);                                            
     }
-
-
 }
